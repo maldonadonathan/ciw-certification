@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Lab 5-1</title>
 
-<script type="text/Javascript">
-<!--
+<head>
+    <title>Lab 5-1</title>
+
+    <script type="text/Javascript">
+        <!--
 
 /************************************************
   The checkGrade() function tests a numerical
@@ -22,23 +23,28 @@ function checkGrade(form) {
   their grade is an A.
 *****************************************************/
  
- 
- 
- 
- 
- 
- 
+ if (myGrade >= 91){
+   alert("Your grade is an A");
+ }
+ else if (myGrade >=81 && myGrade <=90)
+ {
+  alert("Your grade is a B");
+ }
+ else{
+   alert("Your grade is a C or lower.");
+ }
 }//End checkGrade() function
  
 
 //-->
-</script>
+    </script>
 </head>
+
 <body>
-<h3>CIW JavaScript Specialist</h3>
-<hr />
-<form name="myform" id="myform">Select numerical grade value:
-<select name="myselect">
+    <h3>CIW JavaScript Specialist</h3>
+    <hr />
+    <form name="myform" id="myform">Select numerical grade value:
+        <select name="myselect">
 <option>100</option>
 <option>99</option>
 <option>98</option>
@@ -61,10 +67,10 @@ function checkGrade(form) {
 <option>81</option>
 <option>80</option>
 </select>
-<p>
-<input type="button" value="Check Grade" onclick=
-"checkGrade(this.form);" />
-</p>
-</form>
+        <p>
+            <input type="button" value="Check Grade" onclick="checkGrade(this.form);" />
+        </p>
+    </form>
 </body>
+
 </html>
