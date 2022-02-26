@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8" />
-<title>Lab 6-5</title>
 
-<script type="text/Javascript">
-<!--
+<head>
+    <meta charset="utf-8" />
+    <title>Lab 6-5</title>
+
+    <script type="text/Javascript">
+        <!--
     var imagename = "";
 
 /**************************************************************
@@ -19,6 +20,17 @@
 	  images/ciw1_on.gif, images/ciw1_off.gif 
 **************************************************************/
 	
+	var ciw_on = new Image();
+	ciw_on.src = "images/ciw_on.gif";
+	
+	var ciw_off = new Image();
+	ciw_off.src = "images/ciw_off.gif";
+
+	var ciw1_on = new Image();
+	ciw1_on.src = "images/ciw1_on.gif";
+
+	var ciw1_off = new Image();
+	ciw1_off.src = "images/ciw1_off.gif";
     
 	
 	
@@ -44,27 +56,24 @@
 	}
 	
 //-->
-</script>
+    </script>
 
 </head>
 
 <body>
 
-<h3>CIW JavaScript Specialist</h3>
-<hr />
+    <h3>CIW JavaScript Specialist</h3>
+    <hr />
 
-<a href="http://www.ciwcertified.com" 
-  onMouseOver="imageOn('ciw');status='Visit CIW Certified';return true;" 
-  onMouseOut="imageOff('ciw');status='';return true;">
-<img src="images/ciw_off.gif" name="ciw" border="0" width="100" height="52" /></a>
+    <a href="http://www.ciwcertified.com" onMouseOver="imageOn('ciw');status='Visit CIW Certified';return true;" onMouseOut="imageOff('ciw');status='';return true;">
+        <img src="images/ciw_off.gif" name="ciw" border="0" width="100" height="52" /></a>
 
-<p>
+    <p>
 
-<a href="https://www.ciwcertified.com/about-ciw/training-locator" 
- onMouseOver="imageOn('ciw1');status='Visit the CIW training locator';return true;"
- onMouseOut="imageOff('ciw1');status='';return true;">
-<img src="images/ciw1_off.gif" name="ciw1" border="0" width="100" height="52" /></a>
-</p>
+        <a href="https://www.ciwcertified.com/about-ciw/training-locator" onMouseOver="imageOn('ciw1');status='Visit the CIW training locator';return true;" onMouseOut="imageOff('ciw1');status='';return true;">
+            <img src="images/ciw1_off.gif" name="ciw1" border="0" width="100" height="52" /></a>
+    </p>
 
 </body>
+
 </html>
