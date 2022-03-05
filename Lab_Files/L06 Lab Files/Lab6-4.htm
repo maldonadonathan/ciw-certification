@@ -16,10 +16,8 @@
 
             pageContent = "<html><head><title>";
             pageContent += pageTitle + "</title>";
-            pageContent += "<script>alert('The page ' + document.title + ' was created: ' + document.lastModified)
-    </script>"; pageContent += "</head>
-
-<body><strong>";
+            pageContent += "<script>alert('The page ' + document.title + ' was created: ' + document.lastModified)<script>";
+            pageContent += "</head><body><strong>";
             pageContent += "<\/strong><\/body><\/html>";
 
             docWindow = open("", "docWin", "width=250,height=150,resizable=1,status=1");
@@ -41,4 +39,6 @@
 
 </body>
 
-</html></html>
+</html>
+
+</html>
