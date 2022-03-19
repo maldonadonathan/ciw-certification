@@ -1,67 +1,93 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8" />
-<title>Lab 9-1</title>
 
-<script type="text/javascript">
-<!--
-function changeButton()
-{
-  if(document.getElementById('radiobuttonWebdev').checked === true)
-  {
-	radioButton = document.getElementById('radiobuttonWebdev').value;
-	var header = document.getElementById('radiobuttonWebdev').value.innerHTML = "Web Developer!";
-	alert("Hello " + header);
-  }
-  if(document.getElementById('radiobuttonGovernment').checked === true)
-  {
-	radioButton = document.getElementById('radiobuttonGovernment').value;
-	var header = document.getElementById('radiobuttonWebdev').value.innerHTML = "Uncle Sam!";
-	alert("Hello " + header);
-  }
-  getTest();
-}
--->
-</script>
+<head>
+    <meta charset="utf-8" />
+    <title>Lab 9-1</title>
+
+    <script type="text/javascript">
+        function changeButton() {
+            if (document.getElementById('radiobuttonWebdev').checked === true) {
+                radioButton = document.getElementById('radiobuttonWebdev').value;
+                var header = document.getElementById('radiobuttonWebdev').value.innerHTML = "Web Developer!";
+                alert("Hello " + header);
+            }
+            if (document.getElementById('radiobuttonGovernment').checked === true) {
+                radioButton = document.getElementById('radiobuttonGovernment').value;
+                var header = document.getElementById('radiobuttonWebdev').value.innerHTML = "Uncle Sam!";
+                alert("Hello " + header);
+            }
+
+            if (document.getElementById('radiobuttonDuke').checked === true) {
+                radioButton = document.getElementById('radiobuttonDuke').value;
+                var header = document.getElementById('radiobuttonDuke').value.innerHTML = "Blue Devil!";
+                alert("Hello " + header);
+            }
+            if (document.getElementById('radiobuttonPokemon').checked === true) {
+                radioButton = document.getElementById('radiobuttonPokemon').value;
+                var header = document.getElementById('radiobuttonPokemon').value.innerHTML = "Pokefan!";
+                alert("Hello " + header);
+            }
+            if (document.getElementById('radiobuttonArt').checked === true) {
+                radioButton = document.getElementById('radiobuttonArt').value;
+                var header = document.getElementById('radiobuttonArt').value.innerHTML = "Artist!";
+                alert("Hello " + header);
+            }
+
+
+            getTest();
+        }
+    </script>
 </head>
 
 <body>
-<h3>CIW JavaScript Specialist</h3>
-<hr />
-<form>
-<p>Please select your favorite type of Web site:</p>
-<input id="radiobuttonWebdev" type="radio" name="group1" value="Web_Development" checked>Web Development</input><br />
-<input id="radiobuttonGovernment" type="radio" name="group1" value="Government">U.S. Government</input><br />
-<input id="a" type="radio" name="group1" value="A">A</input><br />
-<input id="b" type="radio" name="group1" value="B">B</input><br />
-<input id="c" type="radio" name="group1" value="C">C</input><br />
+    <h3>CIW JavaScript Specialist</h3>
+    <hr />
+    <form>
+        <p>Please select your favorite type of Web site:</p>
+        <input id="radiobuttonWebdev" type="radio" name="group1" value="Web_Development" checked>Web Development</input><br />
+        <input id="radiobuttonGovernment" type="radio" name="group1" value="Government">U.S. Government</input><br />
+        <input id="radiobuttonDuke" type="radio" name="group1" value="Duke">Duke</input><br />
+        <input id="radiobuttonPokemon" type="radio" name="group1" value="Pokemon">Pokemon</input><br />
+        <input id="radiobuttonArt" type="radio" name="group1" value="Art">Art</input><br />
 
 
-<script type="text/javascript">
-<!--
-function getTest()
-{
-  document.write("<h3>CIW JavaScript Specialist</h3>");
-  document.write("<hr />");
+        <script type="text/javascript">
+            function getTest() {
+                document.write("<h3>CIW JavaScript Specialist</h3>");
+                document.write("<hr />");
 
-  if(radioButton == "Web_Development")
-  {
-	document.write("<p>Here's a great site for Web developers:</p><a href=http://www.CIWcertified.com/>CIW Certified</a>");
-  }
-	
-  if(radioButton == "Government")
-  {
-	document.write("<p>Here's a great site if you're interested in U.S. government:</p><a href=http://www.whitehouse.gov/>The White House</a>");
-  }
-}
--->
-</script>
+                if (radioButton == "Web_Development") {
+                    document.write("<p>Here's a great site for Web developers:</p><a href=http://www.CIWcertified.com/>CIW Certified</a>");
+                }
 
-<p>
-<input type="button" onclick="changeButton()" value="Click Here" />
-</p>
-</form>
+                if (radioButton == "Government") {
+                    document.write("<p>Here's a great site if you're interested in U.S. government:</p><a href=http://www.whitehouse.gov/>The White House</a>");
+                }
+
+
+                if (radioButton == "Duke") {
+                    document.write("<p>Here's a great site if you're interested in Duke University:</p><a href=https://duke.edu>Duke University</a>");
+                }
+
+                if (radioButton == "Pokemon") {
+                    document.write("<p>Here's a great site if you're interested in Pokemon:</p><a href=https://www.pokemon.com/us/>The Official Pokemon Website</a>");
+                }
+
+                if (radioButton == "Art") {
+                    document.write("<p>Here's a great site if you're interested in Art:</p><a href=https://www.metmuseum.org>The Met</a>");
+                }
+
+
+
+            }
+        </script>
+
+        <p>
+            <input type="button" onclick="changeButton()" value="Click Here" />
+        </p>
+    </form>
 
 </body>
+
 </html>
