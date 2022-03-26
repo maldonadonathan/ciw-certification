@@ -1,56 +1,61 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Lesson 10 Application Project</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Lesson 10 Application Project</title>
 
-<script type="text/javascript">
-<!--
+    <script type="text/javascript">
+        function validate(form) {
+            for (var i = 0; 3 > i; i++) {
+                if (document.ccForm.elements[i].checked) {
+                    var c = i;
+                }
+            }
+            if (c == 0) {
+                var visa = document.getElementById("number").value.includes("4", 0);
+                if (visa == false || document.getElementById("number").value.length !== 16) {
+                    alert("Select a different credit card or change the card number");
+                }
+            } else if (c == 1) {
+                var mc = document.getElementById("number").value.includes("5", 0);
+                if (mc == false || document.getElementById("number").value.length !== 16) {
+                    alert("Select a different credit card or change the card number");
+                }
+            } else if (c == 2) {
+                var amex = document.getElementById("number").value.includes("3", 0);
+                if (amex == false || document.getElementById("number").value.length !== 15) {
+                    alert("Select a different credit card or change the card number");
+                }
+            }
+        }
 
-
-    function validate(form) {
-
-
-
-
-
-
-
-
-
-    }
-
-  
-
-//-->
-</script>
+        //-->
+    </script>
 
 </head>
 
 <body>
 
-<h3>CIW JavaScript Specialist</h3>
-<hr />
-<form name="ccForm" action="post">
-<p>
-<input type="radio" name="ccard" value="visa" />
-Visa
-</p>
-<p>
-<input type="radio" name="ccard" value="mc" />
-MasterCard
-</p>
-<p>
-<input type="radio" name="ccard" value="amex" />
-American Express
-</p>
-<p>
-Card # 
-<input type="text" name="number" />
-</p>
-<p>
-Exp Date: 
-<select name="expMo">
+    <h3>CIW JavaScript Specialist</h3>
+    <hr />
+    <form name="ccForm" action="post">
+        <p>
+            <input type="radio" name="ccard" value="visa" /> Visa
+        </p>
+        <p>
+            <input type="radio" name="ccard" value="mc" /> MasterCard
+        </p>
+        <p>
+            <input type="radio" name="ccard" value="amex" /> American Express
+        </p>
+        <p>
+            Card #
+            <input type="text" name="number" />
+        </p>
+        <p>
+            Exp Date:
+            <select name="expMo">
 <option value="0">Jan</option>
 <option value="1">Feb</option>
 <option value="2">Mar</option>
@@ -63,8 +68,8 @@ Exp Date:
 <option value="9">Oct</option>
 <option value="10">Nov</option>
 <option value="11">Dec</option>
-</select> 
-<select name="expYr">
+</select>
+            <select name="expYr">
 <option value="2011">2011</option>
 <option value="2012">2012</option>
 <option value="2013">2013</option>
@@ -74,12 +79,13 @@ Exp Date:
 <option value="2017">2017</option>
 <option value="2018">2018</option>
 </select>
-</p>
+        </p>
 
-<input type="button" value="Check Form" onclick="validate(this.form);" />
+        <input type="button" value="Check Form" onclick="validate(this.form);" />
 
-<input type="reset" value="Reset Form" />
-</form>
+        <input type="reset" value="Reset Form" />
+    </form>
 
 </body>
+
 </html>
